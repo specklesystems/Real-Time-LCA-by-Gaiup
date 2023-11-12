@@ -1,100 +1,28 @@
-# Speckle Automate function template - Python
+# Speckle-Gaiups RealtimeLCA Integration Placeholder
 
-This is a template repository for a Speckle Automate functions written in python
-using the [specklepy](https://pypi.org/project/specklepy/) SDK to interact with Speckle data.
+## Disclaimer: Placeholder for Conceptual Discussion
+**IMPORTANT: This repository is purely a placeholder and does not contain any functional examples, code, or implementations. It is intended to represent a conceptual framework for integrating Speckle with Gaiups' RealtimeLCA tool in the AEC industry. The content here is for discussion, ideation, and planning purposes only.**
 
-This template contains the full scaffolding required to publish a function to the automate environment.
-Also has some sane defaults for a development environment setups.
+## Overview
+This placeholder repository is set up to conceptualize the integration of Speckle's data platform with Gaiups' RealtimeLCA, focusing on carbon footprint calculation and data enrichment in AEC projects. Currently, there are no executable solutions, code samples, or detailed examples within this repository.
 
-## Getting started
+## Purpose
+The purpose of this repository is to:
+- Outline the conceptual idea of integrating Speckle with Gaiups RealtimeLCA for enhanced sustainability analysis in AEC projects.
+- Serve as a central point for discussions and brainstorming sessions around this concept.
+- Act as a preliminary step for potential future development and collaborative initiatives.
 
-1. Use this template repository to create a new repository in your own / organization's profile.
+## Contributions and Discussions
+We invite the community to engage in discussions about this conceptual integration. Please feel free to use the Issues section for:
+- Proposing ideas or enhancements related to the integration concept.
+- Discussing the potential impact and implementation strategies for such integration in the AEC industry.
 
-Register the function 
+## Future Plans
+Any future developments, practical examples, or implementation strategies related to this concept will be updated in this repository or appropriately redirected to other repositories.
 
-### Add new dependencies
+## Contact and Feedback
+For more information or to provide your insights and feedback on this conceptual placeholder, please contact [Contact Information].
 
-To add new python package dependencies to the project, use:
-`$ poetry add pandas`
+---
 
-### Change launch variables
-
-describe how the launch.json should be edited
-
-### Github Codespaces
-
-Create a new repo from this template, and use the create new code.
-
-### Using this Speckle Function
-
-1. [Create](https://automate.speckle.dev/) a new Speckle Automation.
-1. Select your Speckle Project and Speckle Model.
-1. Select the existing Speckle Function named [`Random comment on IFC beam`](https://automate.speckle.dev/functions/e110be8fad).
-1. Enter a phrase to use in the comment.
-1. Click `Create Automation`.
-
-## Getting Started with creating your own Speckle Function
-
-1. [Register](https://automate.speckle.dev/) your Function with [Speckle Automate](https://automate.speckle.dev/) and select the Python template.
-1. A new repository will be created in your GitHub account.
-1. Make changes to your Function in `main.py`. See below for the Developer Requirements, and instructions on how to test.
-1. To create a new version of your Function, create a new [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) in your repository.
-
-## Developer Requirements
-
-1. Install the following:
-    - [Python 3](https://www.python.org/downloads/)
-    - [Poetry](https://python-poetry.org/docs/#installing-with-the-official-installer)
-1. Run `poetry shell && poetry install` to install the required Python packages.
-
-## Building and Testing
-
-The code can be tested locally by running `poetry run pytest`.
-
-### Building and running the Docker Container Image
-
-Running and testing your code on your own machine is a great way to develop your Function; the following instructions are a bit more in-depth and only required if you are having issues with your Function in GitHub Actions or on Speckle Automate.
-
-#### Building the Docker Container Image
-
-Your code is packaged by the GitHub Action into the format required by Speckle Automate. This is done by building a Docker Image, which is then run by Speckle Automate. You can attempt to build the Docker Image yourself to test the building process locally.
-
-To build the Docker Container Image, you will need to have [Docker](https://docs.docker.com/get-docker/) installed.
-
-Once you have Docker running on your local machine:
-
-1. Open a terminal
-1. Navigate to the directory in which you cloned this repository
-1. Run the following command:
-
-    ```bash
-    docker build -f ./Dockerfile -t speckle_automate_python_example .
-    ```
-
-#### Running the Docker Container Image
-
-Once the image has been built by the GitHub Action, it is sent to Speckle Automate. When Speckle Automate runs your Function as part of an Automation, it will run the Docker Container Image. You can test that your Docker Container Image runs correctly by running it locally.
-
-1. To then run the Docker Container Image, run the following command:
-
-    ```bash
-    docker run --rm speckle_automate_python_example \
-    python -u main.py run \
-    '{"projectId": "1234", "modelId": "1234", "branchName": "myBranch", "versionId": "1234", "speckleServerUrl": "https://speckle.xyz", "automationId": "1234", "automationRevisionId": "1234", "automationRunId": "1234", "functionId": "1234", "functionName": "my function", "functionLogo": "base64EncodedPng"}' \
-    '{}' \
-    yourSpeckleServerAuthenticationToken
-    ```
-
-Let's explain this in more detail:
-
-`docker run --rm speckle_automate_python_example` tells Docker to run the Docker Container Image that we built earlier. `speckle_automate_python_example` is the name of the Docker Container Image that we built earlier. The `--rm` flag tells docker to remove the container after it has finished running, this frees up space on your machine.
-
-The line `python -u main.py run` is the command that is run inside the Docker Container Image. The rest of the command is the arguments that are passed to the command. The arguments are:
-
-- `'{"projectId": "1234", "modelId": "1234", "branchName": "myBranch", "versionId": "1234", "speckleServerUrl": "https://speckle.xyz", "automationId": "1234", "automationRevisionId": "1234", "automationRunId": "1234", "functionId": "1234", "functionName": "my function", "functionLogo": "base64EncodedPng"}'` - the metadata that describes the automation and the function.
-- `{}` - the input parameters for the function that the Automation creator is able to set. Here they are blank, but you can add your own parameters to test your function.
-- `yourSpeckleServerAuthenticationToken` - the authentication token for the Speckle Server that the Automation can connect to. This is required to be able to interact with the Speckle Server, for example to get data from the Model.
-
-## Resources
-
-- [Learn](https://speckle.guide/dev/python.html) more about SpecklePy, and interacting with Speckle from Python.
+**Note:** This is a placeholder repository without operational content. It is established to support the exploration and discussion of a potential integration concept between Speckle and Gaiups RealtimeLCA.
